@@ -1,3 +1,5 @@
-test: go test ./... -coverprofile=coverage.out
+test: 
+	go test ./... -coverprofile=coverage.out
 
-build: go build -o bin/nats-proto-pubgen
+build: 
+	go build -o bin/nats-proto-pubgen

@@ -1,0 +1,17 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin
+
+# Editor and IDE
+.idea
+*.swp
+*.swo
+*~
+.vscode
+
+# Output coverage tool
+*.out

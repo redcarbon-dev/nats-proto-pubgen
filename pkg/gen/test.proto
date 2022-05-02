@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package test.test;
+
+option go_package = "test/test;test";
+
+// pubgen topic:test.one name:NewOneTest
+message One {
+  string test = 1;
+}
+
+// pubgen topic:test.two name:NewTwoTest
+message Second {
+  string test = 1;
+}
+
+message NoSend {
+  string test = 1;
+}

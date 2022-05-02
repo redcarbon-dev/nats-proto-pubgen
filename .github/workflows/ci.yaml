@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [ "*" ]
+  pull_request:
+    branches: [ "*" ]
+
+jobs:
+  testing:
+    name: Testing
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/chechout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-go@v3
+        with:
+          go-version: '1.18'
+      - run: make test
+  build:
+    name: Building
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/chechout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-go@v3
+        with:
+          go-version: '1.18'
+      - run: make build

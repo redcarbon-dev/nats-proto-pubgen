@@ -15,8 +15,7 @@ func (p *PubCli) {{ .Name }} (data *pb.{{ .Message }}) error {
 		return err
 	}
 
-	p.publish("{{ .Topic }}", msg)
-	return nil
+	return p.publish("{{ .Topic }}", msg)
 }
 
 {{ end }}

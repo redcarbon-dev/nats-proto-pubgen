@@ -44,8 +44,7 @@ func (p *PubCli) NewOneTest(data *pb.One) error {
 		return err
 	}
 
-	p.publish("test.one", msg)
-	return nil
+	return p.publish("test.one", msg)
 }
 
 func (p *PubCli) NewTwoTest(data *pb.Second) error {
@@ -54,8 +53,7 @@ func (p *PubCli) NewTwoTest(data *pb.Second) error {
 		return err
 	}
 
-	p.publish("test.two", msg)
-	return nil
+	return p.publish("test.two", msg)
 }
 `
 	assert.Equal(t, expected, s)
